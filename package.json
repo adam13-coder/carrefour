@@ -1,0 +1,13 @@
+{
+  "name": "carrefour-dishna",
+  "version": "1.0.0",
+  "description": "موقع ونظام طلبات مطعم وكافيه كارفور دشنا",
+  "private": true,
+  "type": "commonjs",
+  "engines": { "node": ">=22.5.0" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch server.js",
+    "test": "node --disable-warning=ExperimentalWarning tests/e2e.js"
+  }
+}

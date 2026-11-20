@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>كارفور دشنا | مطعم وكافيه</title>
+<meta name="description" content="مطعم وكافيه كارفور دشنا - مشويات وبيتزا ومأكولات. اطلب أونلاين واستلم طلبك بسرعة.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="كارفور دشنا">
+    <span class="brand-mark">C</span>
+    <span class="brand-text"><b id="brandName">كارفور دشنا</b><small id="brandTag">مطعم وكافيه</small></span>
+  </a>
+  <nav class="nav-links">
+    <a href="#menu">المنيو</a>
+    <a href="#offers" id="navOffers" hidden>العروض</a>
+    <a href="#about">من نحن</a>
+    <a href="#track">تتبع طلبك</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
+  <button class="cart-btn" id="cartBtn" aria-label="السلة">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.4a2 2 0 0 0 2 1.6h8.1a2 2 0 0 0 2-1.5L21.5 8H6"/></svg>
+    <span>السلة</span><i id="cartCount">0</i>
+  </button>
+</header>
+
+<div class="closed-bar" id="closedBar" hidden></div>
+
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">CARREFOUR DISHNA</span>
+      <h1><span id="heroName">كارفور دشنا</span><em id="heroTag">مطعم وكافيه</em></h1>
+      <p id="heroAbout">مشويات وبيتزا ومأكولات في أجواء راقية.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-gold">اطلب الآن</a>
+        <a href="#track" class="btn btn-ghost">تتبع طلبك</a>
+      </div>
+      <div class="hero-meta">
+        <div><b id="heroHours">—</b><small>ساعات العمل</small></div>
+        <div><b id="heroManager">—</b><small>الإدارة</small></div>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <div class="frame"><img src="/img/team.jpg" alt="فريق كارفور" width="628" height="462"></div>
+      <figcaption>فريق كارفور — صنّاع النجاح</figcaption>
+    </figure>
+  </div>
+</section>
+
+<main>
+  <section class="section" id="offers" hidden>
+    <div class="container">
+      <div class="sec-head"><span>العروض</span><h2>عروض كارفور</h2></div>
+      <div class="offers" id="offersGrid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="menu">
+    <div class="container">
+      <div class="sec-head"><span>المنيو</span><h2>اختر من قائمتنا</h2></div>
+      <div class="menu-tools">
+        <div class="tabs" id="tabs" role="tablist"></div>
+        <input type="search" id="searchBox" placeholder="ابحث عن صنف…" aria-label="بحث">
+      </div>
+      <div id="menuRoot"></div>
+    </div>
+  </section>
+
+  <section class="section dark" id="about">
+    <div class="container about-grid">
+      <div class="about-copy">
+        <div class="sec-head left"><span>من نحن</span><h2>أجواء راقية وطعم يستحق</h2></div>
+        <p id="aboutText"></p>
+        <ul class="facts">
+          <li><b>إدارة</b><span id="aboutManager">—</span></li>
+          <li><b>العنوان</b><span id="aboutAddress">—</span></li>
+          <li><b>ساعات العمل</b><span id="aboutHours">—</span></li>
+        </ul>
+      </div>
+      <div class="gallery">
+        <img class="g1" src="/img/chefs.jpg" alt="طهاة كارفور بأطباق المشويات" loading="lazy">
+        <img class="g2" src="/img/pizza.jpg" alt="بيتزا كارفور" loading="lazy">
+        <img class="g3" src="/img/facade.jpg" alt="واجهة مطعم كارفور" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="track">
+    <div class="container narrow">
+      <div class="sec-head"><span>تتبع الطلب</span><h2>اعرف طلبك وصل لفين</h2></div>
+      <form class="track-form" id="trackForm">
+        <input id="trackCode" placeholder="رقم الطلب (مثال: CF-1001)" autocomplete="off" required>
+        <input id="trackPhone" placeholder="رقم الهاتف المستخدم في الطلب" inputmode="tel" required>
+        <button class="btn btn-gold" type="submit">تتبع</button>
+      </form>
+      <div id="trackResult"></div>
+    </div>
+  </section>
+
+  <section class="section dark" id="contact">
+    <div class="container contact">
+      <div><h3>تواصل معنا</h3><p id="contactAddress"></p></div>
+      <div class="contact-actions" id="contactActions"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container foot">
+    <span>© <span id="year"></span> <span id="footName">كارفور دشنا</span> — جميع الحقوق محفوظة</span>
+    <a class="admin-link" href="/admin" rel="nofollow">الإدارة</a>
+  </div>
+</footer>
+
+<div class="backdrop" id="backdrop" hidden></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-head"><h3>سلة الطلب</h3><button class="icon-btn" id="closeCart" aria-label="إغلاق">✕</button></div>
+  <div class="drawer-body" id="drawerBody"></div>
+</aside>
+
+<div class="modal" id="doneModal" hidden>
+  <div class="modal-card" id="doneCard"></div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="/js/app.js"></script>
+</body>
+</html>

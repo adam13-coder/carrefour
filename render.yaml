@@ -1,0 +1,21 @@
+# نشر على Render (يحتاج خطة تدعم Persistent Disk)
+services:
+  - type: web
+    name: carrefour-dishna
+    runtime: node
+    plan: starter
+    buildCommand: echo "no build step"
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATA_DIR
+        value: /var/data
+      - key: ADMIN_USER
+        value: admin
+      - key: ADMIN_PASSWORD
+        sync: false
+    disk:
+      name: carrefour-data
+      mountPath: /var/data
+      sizeGB: 1
